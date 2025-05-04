@@ -35,3 +35,4 @@ spec:
         ingressClassName: nginx
         hosts:
           - gr.bearjordan.dev
+        path: /
