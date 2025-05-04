@@ -17,17 +17,10 @@ spec:
       image:
         registry: registry.k8s.io
     controller:
-      name: controller
-      enableAnnotationValidations: true
-      image:
-        chroot: false
-        image: ingress-nginx/controller
-        tag: "v1.12.1"
-      containerPort:
-        http: 80
-        https: 443
       service:
-        enabled: true
+        type: NodePort
         external:
           enabled: true
-        type: LoadBalancer
+        nodePorts:
+          http: 30080
+          https: 30443
