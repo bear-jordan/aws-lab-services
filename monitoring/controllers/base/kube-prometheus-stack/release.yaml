@@ -36,3 +36,7 @@ spec:
         hosts:
           - gr.bearjordan.dev
         path: /
+      sidecar:
+        datasources:
+          enabled: true
+          label: grafana_datasource
