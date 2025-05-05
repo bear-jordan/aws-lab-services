@@ -26,6 +26,9 @@ spec:
           kind: PrometheusRule
   values:
     grafana:
+      service:
+        port: 3000
+        targetPort: 3000
       admin:
         existingSecret: grafana-admin-credentials
         userKey: admin-user
